@@ -60,18 +60,18 @@ class Humanoid extends CharacterStats {
     }
     greet () {
         return `${this.name} offers a greeting in ${this.language}.`;
-    }
+    };
 }
 
 // Hero constructor function
-function Hero(greatGrndAttrs) {
-Humanoid.call(this, greatGrndAttrs);
-this.power = function(enemy) {
-  return this.healthPoints.call(enemy) - 7;
+class Hero extends Humanoid {
+    constructor(powers) {
+        super(powers); 
+    }
+    attack(enemy) {
+        return hit += this.healthPoints.call(enemy) - 7;
+    };
 }
-}
-
-Hero.prototype = Object.create(Humanoid.prototype);
 
 //Villain constructor function
 function Villain(cousinGrndAttrs) {
