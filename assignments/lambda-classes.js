@@ -47,6 +47,13 @@ class Student extends Person {
     sprintChallenge(subject) {
         return `${this.name} has begun sprint challenge on ${subject}.`;
     };
+    graduate(grade, student) {
+        if(grade > 70) {
+            return `${student.name} will graduate!`
+        } else {
+            return `${student.name} needs to increase their score before graduating.`
+        };
+    };
 }
 
 //Project Manager constructor
@@ -155,3 +162,4 @@ console.log(mark.PRAssignment('CSS'));
 console.log(mary.sprintChallenge('HTML'));
 console.log(andy.grade(mark, 'JavaScript'));
 console.log(molly.standUp('web14_molly'));
+console.log(rick.graduate(71, rick))
