@@ -39,7 +39,7 @@ class CharacterStats extends GameObject {
     }
     takeDamage() {
         return `${this.name} took damage.`;
-    }
+    };
 }
 
 /*
@@ -51,17 +51,17 @@ class CharacterStats extends GameObject {
 * should inherit destroy() from GameObject through CharacterStats
 * should inherit takeDamage() from CharacterStats
 */
-function Humanoid(grandchildAttrs) {
-CharacterStats.call(this, grandchildAttrs);
-this.team = grandchildAttrs.team,
-this.weapons = grandchildAttrs.weapons,
-this.language = grandchildAttrs.language,
-this.greet = function() {
-  return `${this.name} offers a greeting in ${this.language}.`;
+class Humanoid extends CharacterStats {
+    constructor(custom) {
+        super(custom);
+        this.team = custom.team;
+        this.weapons = custom.weapons;
+        this.language = custom.language;
+    }
+    greet () {
+        return `${this.name} offers a greeting in ${this.language}.`;
+    }
 }
-} 
-
-Humanoid.prototype = Object.create(CharacterStats.prototype);
 
 // Hero constructor function
 function Hero(greatGrndAttrs) {
