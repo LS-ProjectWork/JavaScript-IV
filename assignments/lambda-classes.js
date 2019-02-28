@@ -4,8 +4,8 @@ class Person {
     constructor(info) {
         this.name = info.name;
         this.age = info.age;
-        this.gender = info.gender;
         this.location = info.location;
+        this.gender = info.gender;
     }
     speak() {
         return `Hello my name is ${this.name}, I am from ${this.location}.`
@@ -63,3 +63,17 @@ class ProjectManagers extends Instructor {
         console.log(`${this.name} debugs ${student}'s code on ${subject}.`)
     };
 }
+
+const joe = new Person ({
+    name: 'Joe',
+    age: 26,
+    location: 'Mechanicsville',
+    gender: 'male'
+});
+
+const natalie = new Person({
+    name: 'Natalie',
+    age: 24,
+    location: 'Medilline',
+    gender: 'female'
+});
