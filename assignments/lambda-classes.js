@@ -90,10 +90,30 @@ const andy = new Instructor ({
 
 const sarah = new Instructor ({
     name: 'Sarah',
-    age: 26,
+    age: 28,
     location: 'Libertyville',
     gender: 'female',
     specialty: 'data science',
     favLanguage: 'Python',
     catchPhrase: 'syntactical sugar'
+});
+
+const mary = new Student ({
+    name: 'Mary',
+    age: 32,
+    location: 'Gordon',
+    gender: 'female',
+    previousBackground: 'investment banker',
+    className: 'ds3',
+    favSubjects: ['Python', 'Linear Regression', 'Data Cleaning']
+});
+
+const rick = new Student ({
+    name: 'Rick',
+    age: 21,
+    location: 'Pine Bluff',
+    gender: 'male',
+    previousBackground: 'mechanic',
+    className: 'web12',
+    favSubjects: ['HTML', 'React', 'Java']
 });
