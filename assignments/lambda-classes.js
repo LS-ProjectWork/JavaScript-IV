@@ -118,6 +118,16 @@ const rick = new Student ({
     favSubjects: ['HTML', 'React', 'Java']
 });
 
+const mark = new Student ({
+    name: 'Mark',
+    age: 24,
+    location: 'Richardson',
+    gender: 'male',
+    previousBackground: 'doctor',
+    className: 'web4',
+    favSubjects: ['JavaScript', 'CSS', 'HTML']
+});
+
 const molly = new ProjectManager ({
     name: 'Rick',
     age: 46,
