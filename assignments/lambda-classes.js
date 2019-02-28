@@ -38,7 +38,7 @@ class Student extends Person {
     }
     listsSubjects(){
         for(let i = 0; i < this.favSubjects.length; i++) {
-            return this.favSubjects[i]
+            console.log(this.favSubjects[i])
         };
     };
     PRAssignment(subject) {
@@ -57,7 +57,7 @@ class ProjectManager extends Instructor {
         this.favInstructor = section.favInstructor;
     }
     standUp(channel) {
-        return `${this.name} announces to channel, @channel standy times!`;
+        return `${this.name} announces to channel, @channel standup time!`;
     };
     debugsCode(student, subject) {
        return `${this.name} debugs ${student.name}'s code on ${subject}.`
@@ -129,7 +129,7 @@ const mark = new Student ({
 });
 
 const molly = new ProjectManager ({
-    name: 'Rick',
+    name: 'Molly',
     age: 46,
     location: 'Birmingham, UK',
     gender: 'female',
@@ -145,3 +145,13 @@ const jocelyn = new ProjectManager ({
     gradClassName: 'web2',
     favInstructor: 'Ryan'
 });
+
+console.log(mary.location);
+console.log(joe.speak());
+rick.listsSubjects();
+console.log(sarah.demo('python'));
+console.log(jocelyn.debugsCode(rick, 'javascript'))
+console.log(mark.PRAssignment('CSS'));
+console.log(mary.sprintChallenge('HTML'));
+console.log(andy.grade(mark, 'JavaScript'));
+console.log(molly.standUp('web14_molly'));
