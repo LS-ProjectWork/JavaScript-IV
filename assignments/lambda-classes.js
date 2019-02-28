@@ -21,10 +21,10 @@ class Instructor extends Person {
         this.catchPhrase = attrs.catchPhrase;
     }
     demo(subject) {
-        console.log(`Today we are learning about ${subject}.`)
+        return `Today we are learning about ${subject}.`
     };
     grade(student, subject) {
-        console.log(`${student.name} receives a perfect score on ${subject}.`)
+        return `${student.name} receives a perfect score on ${subject}.`
     };
 }
 
@@ -38,14 +38,14 @@ class Student extends Person {
     }
     listsSubjects(){
         for(let i = 0; i < this.favSubjects.length; i++) {
-            console.log(this.favSubjects[i])
+            return this.favSubjects[i]
         };
     };
     PRAssignment(subject) {
-        console.log(`${this.name} has submitted a PR for ${subject}.`);
+        return `${this.name} has submitted a PR for ${subject}.`;
     };
     sprintChallenge(subject) {
-        console.log(`${this.name} has begun sprint challenge on ${subject}.`)
+        return `${this.name} has begun sprint challenge on ${subject}.`;
     };
 }
 
@@ -57,10 +57,10 @@ class ProjectManager extends Instructor {
         this.favInstructor = section.favInstructor;
     }
     standUp(channel) {
-        console.log(`${this.name} announces to channel, @channel standy times!`)
+        return `${this.name} announces to channel, @channel standy times!`;
     };
     debugsCode(student, subject) {
-        console.log(`${this.name} debugs ${student}'s code on ${subject}.`)
+       return `${this.name} debugs ${student.name}'s code on ${subject}.`
     };
 }
 
@@ -125,7 +125,7 @@ const molly = new ProjectManager ({
     gender: 'female',
     gradClassName: 'web2',
     favInstructor: 'Josh' 
-})
+});
 
 const jocelyn = new ProjectManager ({
     name: 'Rick',
@@ -134,4 +134,4 @@ const jocelyn = new ProjectManager ({
     gender: 'female',
     gradClassName: 'web2',
     favInstructor: 'Ryan'
-})
+});
