@@ -74,14 +74,15 @@ class Hero extends Humanoid {
 }
 
 //Villain constructor function
-function Villain(cousinGrndAttrs) {
-Humanoid.call(this, cousinGrndAttrs);
-this.strength = function(enemy) {
-  return this.healthPoints.call(enemy) - 3;
-}
+class Villain extends Humanoid {
+    constructor(abilities) {
+        super(abilities);
+    }
+    power(enemy) {
+        return hit += this.healthPoints.call(enemy) - 3;
+    }
 }
 
-Villain.prototype = Object.create(Humanoid.prototype);
 /*
 * Inheritance chain: GameObject -> CharacterStats -> Humanoid
 * Instances of Humanoid should have all of the same properties as CharacterStats and GameObject.
