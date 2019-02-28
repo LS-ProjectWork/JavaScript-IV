@@ -50,7 +50,7 @@ class Student extends Person {
 }
 
 //Project Manager constructor
-class ProjectManagers extends Instructor {
+class ProjectManager extends Instructor {
     constructor(section) {
         super(section);
         this.gradClassName = section.gradClassName;
@@ -117,3 +117,21 @@ const rick = new Student ({
     className: 'web12',
     favSubjects: ['HTML', 'React', 'Java']
 });
+
+const molly = new ProjectManager ({
+    name: 'Rick',
+    age: 46,
+    location: 'Birmingham, UK',
+    gender: 'female',
+    gradClassName: 'web2',
+    favInstructor: 'Josh' 
+})
+
+const jocelyn = new ProjectManager ({
+    name: 'Rick',
+    age: 27,
+    location: 'Milan',
+    gender: 'female',
+    gradClassName: 'web2',
+    favInstructor: 'Ryan'
+})
