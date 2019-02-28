@@ -77,3 +77,23 @@ const natalie = new Person({
     location: 'Medilline',
     gender: 'female'
 });
+
+const andy = new Instructor ({
+    name: 'Andy',
+    age: 36,
+    location: 'Mason',
+    gender: 'male',
+    specialty: 'react',
+    favLanguage: 'JavaScript',
+    catchPhrase: 'DRUNK WITH POWER'
+});
+
+const sarah = new Instructor ({
+    name: 'Sarah',
+    age: 26,
+    location: 'Libertyville',
+    gender: 'female',
+    specialty: 'data science',
+    favLanguage: 'Python',
+    catchPhrase: 'syntactical sugar'
+});
